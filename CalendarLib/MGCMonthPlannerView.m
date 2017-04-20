@@ -883,8 +883,8 @@ typedef enum
         [_eventsView registerClass:MGCMonthPlannerWeekView.class forSupplementaryViewOfKind:MonthRowViewKind withReuseIdentifier:MonthRowViewIdentifier];
         [_eventsView registerClass:MGCMonthPlannerHeaderView.class forSupplementaryViewOfKind:MonthHeaderViewKind withReuseIdentifier:MonthHeaderViewIdentifier];
         
-        UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
-        [_eventsView addGestureRecognizer:longPressGesture];
+//        UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
+//        [_eventsView addGestureRecognizer:longPressGesture];
     }
     return _eventsView;
 }
