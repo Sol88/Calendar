@@ -39,7 +39,7 @@ NSString * const MGCCircleMarkAttributeName = @"MGCCircleMarkAttributeName";
 - (instancetype)init
 {
     if (self = [super init]) {
-        _color = [UIColor redColor];
+        _color = [UIColor colorWithRed:0.22 green:0.78 blue:0.42 alpha:1.00];
         _borderColor = [UIColor clearColor];
         _margin = 5.;
     }

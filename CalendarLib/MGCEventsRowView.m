@@ -209,7 +209,7 @@ static const CGFloat kCellSpacing = 2.;		// space around cells
 		if (hiddenCount)
 		{
 			UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
-			label.text = [NSString stringWithFormat:NSLocalizedString(@"%lu more...", nil), (unsigned long)hiddenCount];
+			label.text = [NSString stringWithFormat:@"+ %lu", (unsigned long)hiddenCount];
 			label.textColor = [UIColor grayColor];
 			label.textAlignment = NSTextAlignmentRight;
 			label.font = [UIFont systemFontOfSize:11];
