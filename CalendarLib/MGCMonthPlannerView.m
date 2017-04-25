@@ -1004,6 +1004,10 @@ typedef enum
     // because date formats for headers might change depending on available size
     [self.eventsView reloadData];
 
+    self.headerView.frame = CGRectMake(0,
+                                       0,
+                                       self.frame.size.width,
+                                       self.headerHeight);
     if (!self.headerView.superview) {
         [self addSubview:self.headerView];
     }
