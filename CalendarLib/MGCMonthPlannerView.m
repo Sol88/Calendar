@@ -872,7 +872,7 @@ typedef enum
         _headerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.1].CGColor;
         _headerView.layer.shadowOffset = CGSizeMake(0, 2);
         _headerView.layer.shadowRadius = 3.0;
-        _headerView.layer.shadowOpacity = 0.5;
+        _headerView.layer.shadowOpacity = 1.0;
     }
     return _headerView;
 }
