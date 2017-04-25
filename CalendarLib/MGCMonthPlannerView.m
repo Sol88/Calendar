@@ -930,7 +930,7 @@ typedef enum
         int weekday = (i + self.calendar.firstWeekday - 1 + days.count) % (int)days.count;
         
         UILabel *label = self.dayLabels[i];
-        label.textAlignment = NSTextAlignmentCenter;
+        label.textAlignment = NSTextAlignmentRight;
         label.text = [days objectAtIndex:weekday];
         if (self.weekdaysLabelFont) {
             label.font = self.weekdaysLabelFont;
@@ -964,7 +964,7 @@ typedef enum
     for (int i = 0; i < 7; i++) {
         UILabel *label = [self.dayLabels objectAtIndex:i];
         
-        label.frame = CGRectMake(xPos, 0, colWidth, self.headerHeight);
+        label.frame = CGRectMake(xPos, 0, colWidth - 10, self.headerHeight);
         if (!label.superview) {
             [self addSubview:label];
         }
