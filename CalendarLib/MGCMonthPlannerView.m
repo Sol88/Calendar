@@ -88,6 +88,8 @@ typedef enum
 @property (nonatomic) NSUInteger dragEventTouchDayOffset;			// touch offset from start of event
 @property (nonatomic, weak) NSTimer *dragTimer;
 
+@property (nonatomic, strong) UIView *headerView;
+
 @end
 
 
@@ -860,6 +862,21 @@ typedef enum
 
 #pragma mark - Subviews
 
+- (UIView *)headerView {
+    if (_headerView == nil) {
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                               0,
+                                                               self.frame.size.width,
+                                                               self.headerHeight)];
+        _headerView.backgroundColor = [UIColor whiteColor];
+        _headerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.1].CGColor;
+        _headerView.layer.shadowOffset = CGSizeMake(0, 2);
+        _headerView.layer.shadowRadius = 3.0;
+        _headerView.layer.shadowOpacity = 0.5;
+    }
+    return _headerView;
+}
+
 - (UICollectionView*)eventsView
 {
     if (!_eventsView) {
@@ -966,7 +983,8 @@ typedef enum
         
         label.frame = CGRectMake(xPos, 0, colWidth - 10, self.headerHeight);
         if (!label.superview) {
-            [self addSubview:label];
+            [self.headerView addSubview:label];
+//            [self addSubview:label];
         }
         
         xPos += colWidth;
@@ -985,6 +1003,10 @@ typedef enum
     // we have to reload everything at this point - layout invalidation is not enough -
     // because date formats for headers might change depending on available size
     [self.eventsView reloadData];
+
+    if (!self.headerView.superview) {
+        [self addSubview:self.headerView];
+    }
 }
 
 #pragma mark - Rows handling
