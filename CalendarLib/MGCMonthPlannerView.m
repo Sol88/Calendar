@@ -995,10 +995,10 @@ typedef enum
         [self addSubview:self.eventsView];
     }
     
-    self.headerBorderLayer.frame = CGRectMake(0, self.headerHeight, self.bounds.size.width, 1);
-    if (!self.headerBorderLayer.superlayer) {
-        [self.layer addSublayer:_headerBorderLayer];
-    }
+//    self.headerBorderLayer.frame = CGRectMake(0, self.headerHeight, self.bounds.size.width, 1);
+//    if (!self.headerBorderLayer.superlayer) {
+//        [self.layer addSublayer:_headerBorderLayer];
+//    }
 
     // we have to reload everything at this point - layout invalidation is not enough -
     // because date formats for headers might change depending on available size
