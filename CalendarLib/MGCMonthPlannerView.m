@@ -955,7 +955,7 @@ typedef enum
         } else {
             label.font = font;
         }
-        if (i == 0 || i == 6) {
+        if (weekday == 0 || weekday == 6) {
             label.textColor = self.weekEndDaysLabelTextColor;
         } else {
             label.textColor = self.weekdaysLabelTextColor;
