@@ -185,6 +185,8 @@ typedef NS_ENUM(NSUInteger, MGCMonthPlannerScrollAlignment) {
  */
 @property (nonatomic, strong) UIColor *weekdaysLabelTextColor;
 
+@property (nonatomic, strong) UIColor *weekEndDaysLabelTextColor;
+
 /*!
 	@abstract	Font used for the weekday headers.
  */

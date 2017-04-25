@@ -955,7 +955,11 @@ typedef enum
         } else {
             label.font = font;
         }
-        label.textColor = self.weekdaysLabelTextColor;
+        if (i == 0 || i == 6) {
+            label.textColor = self.weekEndDaysLabelTextColor;
+        } else {
+            label.textColor = self.weekdaysLabelTextColor;
+        }
         label.hidden = (self.headerHeight == 0);
     }
 }
