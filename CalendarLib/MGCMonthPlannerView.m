@@ -1498,6 +1498,7 @@ typedef enum
     view.drawHorizontalLines = self.gridStyle & MGCMonthPlannerGridStyleHorizontalLines;
     view.drawBottomDayLabelLines = self.gridStyle & MGCMonthPlannerGridStyleBottomDayLabel;
     view.dayCellHeaderHeight = self.dayCellHeaderHeight;
+    view.gridColor = self.gridColor == nil ? [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.00] : self.gridColor;
 
     [view setNeedsDisplay];
     
